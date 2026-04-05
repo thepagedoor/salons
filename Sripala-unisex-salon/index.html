@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title id="page-title"></title>
+
+<link rel="shortcut icon" href="https://res.cloudinary.com/diac87ufa/image/upload/v1775328261/favicon_jummtb.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&display=swap" rel="stylesheet"/>
+
+<style>
+body { font-family: 'Manrope', sans-serif; }
+
+/* GLASS EFFECT */
+.glass {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* IMAGE */
+.img-hover {
+  filter: grayscale(100%);
+  transition: all 0.6s ease;
+}
+.img-hover:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+
+    const CONFIG = {
+      business_name: "Sripala unisex salon",
+      location: "madhapur",
+      phone: "4048583455",
+      whatsapp_message: "Hi I saw your business and wanted to book an appointment",
+      facebook: "#",
+      instagram: "#",
+      x: "#",
+      youtube: "#"
+    };
+    
+
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("hidden");
+}
+function closeMenu() {
+  document.getElementById("menu").classList.add("hidden");
+}
+
+function openPopup() {
+  popup.classList.remove("hidden");
+  popup.classList.add("flex");
+}
+function closePopup() {
+  popup.classList.add("hidden");
+}
+
+function handleInterest() {
+  alert("Our team will contact you soon!");
+  window.location.href = "mailto:admin@p-d.site?subject=Interested";
+}
+function handleRemove() {
+  alert("Your site will be taken down shortly.");
+  window.location.href = "mailto:admin@p-d.site?subject=Remove";
+}
+</script>
+</head>
+
+<body class="bg-white text-gray-900">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 glass">
+  <div class="flex justify-between items-center px-4 py-4 max-w-7xl mx-auto">
+
+    <a href="#home">
+      <img src="https://res.cloudinary.com/diac87ufa/image/upload/v1775328261/logo_hahzue.webp" class="h-10">
+    </a>
+
+    <button onclick="toggleMenu()" class="md:hidden text-2xl">☰</button>
+
+    <div id="menu" class="hidden absolute top-16 left-0 w-full glass md:static md:flex md:w-auto md:gap-10 p-6 md:p-0">
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#contact" onclick="closeMenu()" class="bg-black text-white px-5 py-2 rounded-full">Book</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="pt-24 h-screen flex items-center justify-center bg-gray-100 text-center reveal">
+
+  <div class="absolute opacity-20">
+    <img src="https://res.cloudinary.com/diac87ufa/image/upload/v1775328261/heroimg_s8tlyq.png" class="w-[300px] md:w-[500px]">
+  </div>
+
+  <div class="z-10">
+    <h1 id="hero-title" class="text-3xl md:text-5xl font-bold mb-6 px-4"></h1>
+
+    <a id="wa-link" class="bg-black text-white px-8 py-4 inline-block rounded-full hover:scale-105 transition">
+      Book Appointment
+    </a>
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-16 px-4 md:py-24 md:px-6 max-w-6xl mx-auto reveal">
+  <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Services</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="font-semibold mb-4">Hair Styling</h3>
+      <ul class="text-gray-600"><li>Haircuts</li><li>Wash & Blowdry</li><li>Coloring</li><li>Treatments</li></ul>
+    </div>
+
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="font-semibold mb-4">Skin Care</h3>
+      <ul class="text-gray-600"><li>Facials</li><li>Acne</li><li>Tan removal</li></ul>
+    </div>
+
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="font-semibold mb-4">Others</h3>
+      <ul class="text-gray-600"><li>Manicure & Pedicure</li><li>Massage</li><li>Makeup</li></ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="py-16 px-4 md:py-24 max-w-6xl mx-auto reveal">
+  <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Gallery</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <img class="img-hover h-80 w-full object-cover rounded-xl" src="https://res.cloudinary.com/diac87ufa/image/upload/v1775328261/men1_ebxc6g.jpg">
+    <img class="img-hover h-80 w-full object-cover rounded-xl" src="https://res.cloudinary.com/diac87ufa/image/upload/v1775328261/women1_xslozb.png">
+    <img class="img-hover h-80 w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-16 px-4 md:py-24 text-center max-w-5xl mx-auto reveal">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6">About</h2>
+  <p id="about-text" class="text-gray-600"></p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 px-4 md:py-24 text-center reveal">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6">Contact</h2>
+  <a id="wa-link" class="bg-black text-white px-8 py-4 rounded-full">Book Appointment</a>
+</section>
+
+<section class="py-16 text-center">
+  <div class="flex justify-center gap-6">
+    <a id="fb"><img src="https://cdn-icons-png.flaticon.com/128/15047/15047435.png" class="w-10"></a>
+    <a id="ig"><img src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" class="w-10"></a>
+    <a id="x"><img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" class="w-10"></a>
+    <a id="yt"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png" class="w-10"></a>
+  </div>
+</section>
+
+
+<!-- FLOAT -->
+<a id="wa-link" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg">💬</a>
+
+<!-- FOOTER -->
+<footer class="py-12 text-center text-white mt-16" style="background:#3a073c;">
+ <a href="https://p-d.site/"> <img src="https://res.cloudinary.com/diac87ufa/image/upload/v1775328261/favicon_jummtb.png" class="w-32 mx-auto mb-3"></a> 
+  <p class="opacity-80">Powered by <a href="https://p-d.site/">ThePageDoor</a></p>
+  <button onclick="openPopup()" class="bg-white text-black px-6 py-2 rounded-full mt-4">Contact</button>
+</footer>
+
+<!-- POPUP -->
+<div id="popup" class="fixed inset-0 bg-black/50 hidden items-center justify-center">
+  <div class="bg-white p-6 rounded-xl text-center w-[90%] max-w-sm">
+    <h2 class="mb-4 font-semibold">Contact</h2>
+    <button onclick="handleInterest()" class="bg-black text-white w-full py-2 mb-2 rounded">Interested</button>
+    <button onclick="handleRemove()" class="border w-full py-2 rounded">Remove</button>
+    <button onclick="closePopup()" class="text-sm mt-3">Close</button>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+const waURL = `https://wa.me/${CONFIG.phone}?text=${encodeURIComponent(CONFIG.whatsapp_message)}`;
+document.getElementById("page-title").innerText = `${CONFIG.business_name}`;
+document.getElementById("hero-title").innerText = `${CONFIG.business_name} ${CONFIG.location}`;
+document.querySelectorAll("#wa-link").forEach(el => el.href = waURL);
+document.getElementById("about-text").innerHTML = `At <strong>${CONFIG.business_name}</strong> in <strong>${CONFIG.location}</strong>, we provide premium salon services with expert care, modern styling, and a hygienic environment.`;
+
+// SCROLL ANIMATION
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
